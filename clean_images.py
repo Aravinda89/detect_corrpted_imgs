@@ -2,6 +2,7 @@ import os
 import argparse
 from PIL import Image
 
+
 def check_and_remove_corrupted_image(file_path):
     try:
         with Image.open(file_path) as img:
@@ -22,7 +23,7 @@ def scan_and_clean_directory(directory):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Scan and remove corrupted image files from a dataset.")
-    parser.add_argument("./dataset", type=str, help="Path to the dataset directory")
+    parser.add_argument("directory", type=str, help="Path to the dataset directory")
     args = parser.parse_args()
 
     scan_and_clean_directory(args.directory)
