@@ -2,7 +2,6 @@ import os
 import argparse
 from PIL import Image
 
-
 def check_and_remove_corrupted_image(file_path):
     try:
         with Image.open(file_path) as img:
